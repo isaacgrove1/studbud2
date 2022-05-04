@@ -1,0 +1,65 @@
+// HOMEPAGE
+.body-home{
+    // margin: 4em !important;
+    background-color: #48567B;
+}
+
+#home-welcome-screen{
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+}
+
+.container-tasks{
+    background-color: #484851;
+    margin: 0px 50px;
+    padding: 40px 0px 340px 30px;
+    border-radius: 40px;
+}
+
+#taskform{
+    align-items: center;
+    // background-color: #484851;
+    padding: 0px 0px 40px 30px;
+    border-radius: 40px;
+}
+
+#links-to-pages {
+    display: flex;
+    flex-direction: column;
+    float: right;
+}
+
+#home-link-2, #home-link-4, #home-link-1, #home-link-3, #home-link-5{
+    color: #3A4056;
+    text-decoration: none;
+    font-family: 'Inter Regular', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 300;
+    padding: 7.4% 30px 7.4% 15px;
+}
+
+#home-link-1, #home-link-3, #home-link-5{
+    background-color: #E0E0E0;
+}
+
+#home-link-2, #home-link-4{
+    background-color: white;
+}
+
+#welcome{
+    font-size: 4rem;
+    margin-bottom: -55px;
+}
+
+#here-tasks{
+    font-size: 2rem;
+}
+
+#tasklist{
+    list-style: none;
+    color: white;
+    font-size: 15px;
+    font-family: 'Inter Regular', sans-serif;
+    font-weight: 300;
+}
+  

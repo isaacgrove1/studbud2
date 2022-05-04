@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="scss/main.scss" rel="stylesheet" type="text/css" />
+    <title>Pomodoro</title>
+</head>
+<body class='body-pomodoro'>
+    <a href='index.html'><img src='assets/back_w.png' class='back-button'></a>
+    <span class='pomodoro-timer-outline'></span>
+    <div class='pomodoro-settings-div'>
+        <h3 id='pomodoro-SessSettings'>Session Settings</h3>
+        <form class='pomodoro-settings'>
+            <label for="NumSess">Number of Sessions:</label>
+            <input type="number" name="NumSess" id="numSessInput">
+
+            <label for="StudyTime">Each study period (mins):</label>
+            <input type="number" name="StudyTime" id="studyTimeInput">
+            <input type='button' value='set time' id='pomodoro-set-time'>
+
+            <label for="StudyBreak">Each study break (mins):</label>
+            <input type="number" name="StudyBreak" id="studyBreakInput">
+
+            <h5>Total Session time: 2:15</h5>
+        </form>
+    </div>
+    <p id="pomodoro-countdown">Time</p>
+    <button id="pomodoro-start">Start</button>
+    <script src="pomodoro.js"></script>
+</body>
+</html>

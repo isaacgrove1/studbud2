@@ -1,0 +1,55 @@
+.container-stopwatch{
+    // margin-left: 5%;
+    // margin-right: 5%;
+    margin-top: 17%;
+    // border: solid red;
+    float:initial;
+}
+
+.stopwatch-buttons{
+    margin-left: 10%;
+}
+
+#button-start, #button-stop, #button-reset{
+    border: none;
+    border-radius: 40px;
+    margin-right: 20px;
+    padding: 18px;
+    color: white;
+    font-size: 15px;
+    font-weight:600;
+}
+
+#button-start{
+    background-color: rgb(31, 119, 31);
+}
+
+#button-stop{
+    background-color: #E74E4D;
+}
+
+#button-reset{
+    background-color: #2D2C3D;
+}
+
+.back-button{
+    width: 4%;
+    position: absolute;
+    top: 3%;
+    left: 2%;
+}
+
+#minutes, #seconds, #tens{
+    font-size: 130px;
+    color: black;
+    font-weight: 400;
+  }
+  
+  #stopwatch-progress{
+    position: absolute;
+    top: 10%;
+    left: 26%;
+    color: #E74E4D;
+    text-decoration: underline 3px;
+    font-size: 70px;
+  }

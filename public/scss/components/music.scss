@@ -1,0 +1,48 @@
+// MUSIC PLAYER
+.music-split {
+    height: 100%;
+    width: 65%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.music-left {
+    left: 0;
+    background-color: #F6F6F6;
+}
+
+/* Control the right side */
+.music-right {
+    right: 0;
+    background-color: Black;
+}
+
+.music-back-button{
+    width:7% !important;
+    left: 2% !important;
+}
+
+#music-player{
+    position: relative;
+    left: 17%;
+    width:70%;
+    height: 760;
+}
+
+#spotify-logo{
+    width: 40%;
+    margin-top: 25%;
+    margin-left: 7%;
+}
+
+#connected-to{
+    color: black !important;
+    font-size: 4rem;
+    font-weight: 600;
+    position: relative;
+    right: 23%;
+    top: 28%;
+}

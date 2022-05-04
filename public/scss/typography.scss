@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+
+html {font-size: 100%;} /*16px*/
+
+body {
+  background: white;
+  font-family: 'Inter Regular', sans-serif;
+  font-weight: 300;
+  line-height: 1.75;
+  color: #000000;
+}
+
+p {margin-bottom: 1rem;
+}
+
+label{
+  color: white;
+}
+
+h1, h2, h3, h4, h5{
+  margin: 3rem 0 1.38rem;
+  font-family: 'Inter Regular', sans-serif;
+  color: white;
+  text-align: center;
+}
+
+// semibold
+h1 {font-size: 3.031rem;
+  font-weight: 600;
+}
+
+// medium
+h2 {font-size: 2.441 rem;
+  font-weight: 500;}
+
+// regular
+h3 {font-size: 1.953rem;
+  font-weight: 400;
+}
+
+// light
+h4 {font-size: 1.563rem;
+  font-weight: 300;
+}
+
+// thin
+h5 {font-size: 1.25rem;
+  font-weight: 100;}
+
+small, .text_small {font-size: 0.8rem;}
+
+
+
+//___________________________ 
+// Homepage
+// #home-link-2, #home-link-4, #home-link-1, #home-link-3, #home-link-5{
+//   color: #3A4056;
+//   text-decoration: none;
+//   font-family: 'Inter Regular', sans-serif;
+//   font-size: 2.8rem;
+//   font-weight: 300;
+//   padding: 7.4% 30px 7.4% 15px;
+// }
+
+// #home-link-1, #home-link-3, #home-link-5{
+//   background-color: #E0E0E0;
+// }
+
+// #home-link-2, #home-link-4{
+//   background-color: white;
+// }
+
+// #welcome{
+//   font-size: 4rem;
+//   margin-bottom: -55px;
+// }
+
+// #here-tasks{
+//   font-size: 2rem;
+// }
+
+// #tasklist{
+//   list-style: none;
+//   color: white;
+//   font-size: 15px;
+//   font-family: 'Inter Regular', sans-serif;
+//   font-weight: 300;
+// }
+
+
+
+// // __________________________
+// // Stopwatch
+// #minutes, #seconds, #tens{
+//   font-size: 130px;
+//   color: black;
+//   font-weight: 400;
+// }
+
+// #stopwatch-progress{
+//   position: absolute;
+//   top: 10%;
+//   left: 26%;
+//   color: #E74E4D;
+//   text-decoration: underline 3px;
+//   font-size: 70px;
+// }
+
+
+
+// // _________________________
+// // Acronym
+
+// #acronym-list>li:nth-child(odd){
+//   font-weight:bold;
+//   font-size: 30px;
+//   color: white;
+// }
+
+// #acronym-list>li:nth-child(even){
+//   font-size: 20px;
+//   color: white;
+// }
+
+
+// // ___________________
+// // covey quads
+// .text-vert{
+//   float: left;
+//   writing-mode: vertical-rl;
+// }
+
+
+
+// // _________________
+// // Pomodoro
+// #pomodoro-countdown{
+//   font-size: 70px;
+//   position: absolute;
+//   left: 30%;
+//   top: 40%;
+// }
+
+
+
+// // ______________
+// // music player
+// #connected-to{
+//   color: black !important;
+//   font-size: 4rem;
+//   font-weight: 600;
+//   position: relative;
+//   right: 23%;
+//   top: 28%;
+// }

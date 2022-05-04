@@ -1,0 +1,30 @@
+// COVEY QUADS
+.covey-quadrant {
+    // border: 1px solid red;
+    display: grid;
+    grid-template-columns: 46% 42%;
+    grid-auto-rows: 40vh 40vh;
+    margin-left: 10%;
+    margin-top: 3%;
+}
+
+.covey-quad1 {
+background-color: #E74E4D;
+}
+
+.covey-quad2 {
+background-color: #48567B;
+}
+
+.covey-quad3 {
+background-color: #F57F7E;
+}
+
+.covey-quad4 {
+background-color: #7082B2;
+}
+
+.text-vert{
+    float: left;
+    writing-mode: vertical-rl;
+}
