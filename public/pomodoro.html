@@ -14,20 +14,20 @@
         <h3 id='pomodoro-SessSettings'>Session Settings</h3>
         <form class='pomodoro-settings'>
             <label for="NumSess">Number of Sessions:</label>
-            <input type="number" name="NumSess" id="numSessInput">
+            <input type="number" name="NumSess" id="numSessInput" placeholder="Max 3">
 
             <label for="StudyTime">Each study period (mins):</label>
             <input type="number" name="StudyTime" id="studyTimeInput">
-            <input type='button' value='set time' id='pomodoro-set-time'>
 
             <label for="StudyBreak">Each study break (mins):</label>
             <input type="number" name="StudyBreak" id="studyBreakInput">
-
-            <h5>Total Session time: 2:15</h5>
+            
+            <input type='button' value='set time' id='pomodoro-set-time'>
+            <h5>Total Session time:<h5><h5>2:15</h5>
         </form>
     </div>
-    <p id="pomodoro-countdown">Time</p>
     <button id="pomodoro-start">Start</button>
+    <p id="pomodoro-countdown">Time</p>
     <script src="pomodoro.js"></script>
 </body>
 </html>

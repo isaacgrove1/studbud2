@@ -51,18 +51,28 @@ function addTask(taskDescription, createdDate, dueDate, priorityRating, estimate
 
 // Function to display the item on the page
 function renderTask(task) {
+// local storage
+window.localStorage.setItem("task", JSON.stringify(task));
+let taskNew = window.localStorage.getItem("task");
+taskNew = JSON.parse(taskNew);
+let val1 = taskNew.taskDescription
+let val2 = taskNew.dueDate
+let val3 = taskNew.priorityRating
+let val4 = taskNew.estimatedTime
+let val5 = taskNew.completionStatus
+
   let item = document.createElement("li");
-  item.innerHTML = "<p>" + "<u>" + "<b>" + task.taskDescription + "</b>" + "</u>" + "<br>" + "<br>" +
-                  "<b>" + "Due on: " + "</b>" + task.dueDate + "<br>" +
-                  "<b>" + "At: " + "</b>" + task.priorityRating + "<br>" + 
-                  "<b>" + "Estimated to take: " + "</b>" + task.estimatedTime + " hours" + "<br>" + 
-                  "<b>" + "Its a " + "</b>" + task.completionStatus + " priority" + "</p>";
+  item.innerHTML = "<p>" + "<u>" + "<b>" + val1 + "</b>" + "</u>" + "<br>" + "<br>" +
+                  "<b>" + "Due on: " + "</b>" + val2 + "<br>" +
+                  "<b>" + "At: " + "</b>" + val3 + "<br>" + 
+                  "<b>" + "Estimated to take: " + "</b>" + val4 + " hours" + "<br>" + 
+                  "<b>" + "Its a " + "</b>" + val5 + " priority" + "</p>";
 
   tasklist.appendChild(item);
 
   // Setup delete button DOM elements
   let delButton = document.createElement("button");
-  let delButtonText = document.createTextNode("X");
+  let delButtonText = document.createTextNode("Delete");
   delButton.appendChild(delButtonText);
   item.appendChild(delButton); // Adds a delete button to every task
 

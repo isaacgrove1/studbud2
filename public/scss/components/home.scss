@@ -62,4 +62,32 @@
     font-family: 'Inter Regular', sans-serif;
     font-weight: 300;
 }
+
+.allTaskInput{
+    border: none;
+    border-bottom: 2px solid white;
+    opacity: 100;
+    background: transparent;
+    color: white;
+}
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+#submitTask{
+    border-radius: 10px;
+    background-color: white;
+    border: none;
+    font-size: 15px;
+    opacity: 0.8;
+}
+
+#submitTask:hover{
+    background-color: rgb(238, 238, 238);
+    font-size: 15.5px;
+    color: black;
+    opacity: 1;
+    cursor: pointer;
+}
   

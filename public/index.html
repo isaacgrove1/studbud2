@@ -14,23 +14,23 @@
         <!-- Task list -->
         <form id="taskform">
           <label for="task">Task:</label>
-          <input type="text" name="task" id="taskInput">
+          <input type="text" name="task" class='allTaskInput' id="taskInput">
 
-          <br>
+          <br><br>
           <!-- Date input -->
           <label for="dueDate">Due Date: </label>
-          <input type="date" name="dueDate" id="dueDateInput">
-          <br>
+          <input type="date" name="dueDate" class='allTaskInput' id="dueDateInput">
+          <br><br>
           <!-- Time input -->
           <label for="completionTime">Completion Time: </label>
-          <input type="time" name="completionTime" id="completionTimeInput">
+          <input type="time" name="completionTime" class='allTaskInput' id="completionTimeInput">
 
-          <br>
+          <br><br>
 
           <label for="estimatedTime">Estimated completion time (in hours):</label>
-          <input type="number" name="estimatedTime" id="estimatedTimeInput">
+          <input type="number" name="estimatedTime" class='allTaskInput' id="estimatedTimeInput">
           <!-- Priority -->
-          <br>
+          <br><br>
 
           <label for="priority">Task Priority:</label>
           <select name="prority" id="priorityInput">
@@ -40,9 +40,9 @@
             <option value="High">High</option>
           </select>
 
-          <br>
+          <br><br>
 
-          <button type="submit">Submit</button>
+          <button type="submit" id="submitTask">Submit</button>
         </form>  
         <ul id="tasklist"></ul>
       </div>
@@ -54,6 +54,6 @@
       <a id='home-link-4' href='pomodoro.html'>Pomodoro</a>
       <a id='home-link-5' href='acronym.html'>Acronym</a>
     </nav>
-    <script src="home.js"></script>
+    <script src="home2.js"></script>
   </body>
 </html>

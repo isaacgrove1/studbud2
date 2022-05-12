@@ -43,13 +43,30 @@
 
 #pomodoro-start{
     position: absolute;
-  left: 30%;
-  top: 60%;
+  left: 58.5%;
+  bottom: 42%;
+  width: 6%;
+  background-color: #E74E4D;
+  border-radius: 5px;
+  border: none;
+  color: white
 }
 
 #pomodoro-countdown{
-    font-size: 70px;
+    font-size: 110px;
     position: absolute;
-    left: 30%;
-    top: 40%;
+    left: 27%;
+    top: 36%;
+}
+
+#pomodoro-set-time{
+    position: relative;
+    left: 25%;
+    margin-top: 8px;
+    width: 50%;
+    margin-bottom: 15px;
+    background-color: #484851;
+  border-radius: 5px;
+  border: none;
+  color: white
 }
