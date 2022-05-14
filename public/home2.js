@@ -52,8 +52,8 @@ function addTask(taskDescription, createdDate, dueDate, priorityRating, estimate
 // Function to display the item on the page
 function renderTask(task) {
 // local storage
-window.localStorage.setItem("task", JSON.stringify(task));
-let taskNew = window.localStorage.getItem("task");
+localStorage.setItem("task", JSON.stringify(task));
+let taskNew = localStorage.getItem("task");
 taskNew = JSON.parse(taskNew);
 let val1 = taskNew.taskDescription
 let val2 = taskNew.dueDate
