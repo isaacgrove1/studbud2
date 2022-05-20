@@ -1,7 +1,8 @@
+updateScreen();
 var text = document.getElementById("input-acronym"); //checks there is input
     text.addEventListener("keydown", function (e) {
         if (e.code === "Enter") {  //checks whether the pressed key is "Enter"
-            validate(e);
+            validate(e)
         }
     });
 
@@ -16,32 +17,40 @@ var text = document.getElementById("input-acronym"); //checks there is input
     }
     var joined_new_acro = new_acro_term.join('').toUpperCase(); //joins all the letters in new variable and makes uppercase
 
-    // let obj_term = {
-    //     'text_id': text,
-    //     'new_term_id': joined_new_acro
-    // };
+    // YT TUT
 
-    let definitions
-
-    if (localStorage.getItem('definitions') == null) {
-        definitions = [];
-        defintiions.push(text)
-      }
-    else{
-        defintiions.push(text)
+    var myObj = {
+        'name': text,
+        'short': joined_new_acro
     }
 
-    localStorage.setItem("text", JSON.stringify([definitions]));
-    localStorage.setItem("code", JSON.stringify(joined_new_acro));
+    if(localStorage.getItem('data') == null){
+        localStorage.setItem('data', '[]');
+    }
 
-    localStorage.setItem("bar", JSON.stringify([1,2,3]));
-    var foo = localStorage.getItem("bar");
-    JSON.parse(foo);
-    // returns [1,2,3]
+    var old_data = JSON.parse(localStorage.getItem('data'))
+    old_data.push(myObj)
 
-    var li = "<li>" + text + "</li>";
-    var li2 = "<li>" + joined_new_acro + "</li>";
-    document.getElementById("acronym-list").insertAdjacentHTML('beforeend', li2); //add to list
-    document.getElementById("acronym-list").insertAdjacentHTML('beforeend', li); //add to list
-    document.getElementById("input-acronym").value = ""; // clear the value from typing box
+    localStorage.setItem('data', JSON.stringify(old_data))
+    updateScreen();
   }
+
+function updateScreen(){
+    if(localStorage.getItem('data') != null){
+        data = JSON.parse(localStorage.getItem('data'))
+        console.log(data)
+        // reseting list before printing !important!
+        document.getElementById("acronym-list").innerHTML = ""
+        for (let i = 0; i < data.length; i++) {
+            let long = data[i].name;
+            let short = data[i].short;
+
+            var li = "<li>" + long + "</li>";
+            var li2 = "<li>" + short + "</li>";
+            document.getElementById("acronym-list").insertAdjacentHTML('beforeend', li2); //add to list
+            document.getElementById("acronym-list").insertAdjacentHTML('beforeend', li); //add to list
+            document.getElementById("input-acronym").value = ""; // clear the value from typing box
+
+        }
+    }
+}

@@ -21,12 +21,16 @@
 
             <label for="StudyBreak">Each study break (mins):</label>
             <input type="number" name="StudyBreak" id="studyBreakInput" placeholder="5">
-            
+    
             <input type='button' value='set time' id='pomodoro-set-time'>
-            <h5>Total Session time:<h5><h5>2:15</h5>
+            
         </form>
     </div>
-    <button id="pomodoro-start">Start</button>
+    <div class = 'pomodoro_container'>
+        <button id="pomodoro-start">Start</button>
+        <h5>Total Session time:<h5>
+        <h5 id='totalTime'></h5>
+    </div>
     <p id="pomodoro-countdown">Time</p>
     <script src="pomodoro.js"></script>
 </body>

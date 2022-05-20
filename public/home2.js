@@ -32,13 +32,13 @@ button.addEventListener("click", function(event) {
 var taskList = [];
 
 function addTask(taskDescription, createdDate, dueDate, priorityRating, estimatedTime, completionStatus) {
-  let task = {
-    taskDescription,
-    createdDate,
-    dueDate,
-    priorityRating,
-    estimatedTime,
-    completionStatus
+  var task = {
+    'createdDate_key': Date.now(),
+    'description_key': taskDescription,
+    'due_key': dueDate,
+    'priority_key': priorityRating,
+    'estimated_key': estimatedTime,
+    'completion_key': completionStatus
   };
 
   // Add the task to our array of tasks
@@ -52,23 +52,24 @@ function addTask(taskDescription, createdDate, dueDate, priorityRating, estimate
 // Function to display the item on the page
 function renderTask(task) {
 // local storage
-localStorage.setItem("task", JSON.stringify(task));
-let taskNew = localStorage.getItem("task");
+localStorage.setItem(task.createdDate_key, JSON.stringify(task));
+let taskNew = localStorage.getItem(task.createdDate_key);
 taskNew = JSON.parse(taskNew);
-let val1 = taskNew.taskDescription
-let val2 = taskNew.dueDate
-let val3 = taskNew.priorityRating
-let val4 = taskNew.estimatedTime
-let val5 = taskNew.completionStatus
 
-  let item = document.createElement("li");
-  item.innerHTML = "<p>" + "<u>" + "<b>" + val1 + "</b>" + "</u>" + "<br>" + "<br>" +
-                  "<b>" + "Due on: " + "</b>" + val2 + "<br>" +
-                  "<b>" + "At: " + "</b>" + val3 + "<br>" + 
-                  "<b>" + "Estimated to take: " + "</b>" + val4 + " hours" + "<br>" + 
-                  "<b>" + "Its a " + "</b>" + val5 + " priority" + "</p>";
+// let val1 = taskNew.taskDescription
+// let val2 = taskNew.dueDate
+// let val3 = taskNew.priorityRating
+// let val4 = taskNew.estimatedTime
+// let val5 = taskNew.completionStatus
 
-  tasklist.appendChild(item);
+//   let item = document.createElement("li");
+//   item.innerHTML = "<p>" + "<u>" + "<b>" + val1 + "</b>" + "</u>" + "<br>" + "<br>" +
+//                   "<b>" + "Due on: " + "</b>" + val2 + "<br>" +
+//                   "<b>" + "At: " + "</b>" + val3 + "<br>" + 
+//                   "<b>" + "Estimated to take: " + "</b>" + val4 + " hours" + "<br>" + 
+//                   "<b>" + "Its a " + "</b>" + val5 + " priority" + "</p>";
+
+  updateFavourites()
 
   // Setup delete button DOM elements
   let delButton = document.createElement("button");
@@ -84,4 +85,18 @@ let val5 = taskNew.completionStatus
   
   // Clear the value of the input once the task has been added to the page
   form.reset();
+}
+
+function updateFavourites() {
+  let list = document.querySelector("aside ul");
+  list.innerHTML = "";
+
+  // Check localStorage for items in the `favourites` key
+  if (localStorage.getItem('taskList') == null) {
+    return;
+  }
+
+  // If there are items, get them, and convert back from JSON (explained above).
+  let taskList = localStorage.getItem('taskList');
+  taskList = JSON.parse(taskList);
 }
