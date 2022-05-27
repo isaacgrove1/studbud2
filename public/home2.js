@@ -1,7 +1,7 @@
 // Setting up variables for our HTML elements using DOM selection
 const form = document.getElementById("taskform");
 const button = document.querySelector("#taskform > button"); // Complex CSS query
-const tasklist = document.getElementById("tasklist");
+// const tasklist = document.getElementById("tasklist");
 const taskInput = document.getElementById("taskInput");
 const dueDateInput = document.getElementById("dueDateInput");
 const completionTimeInput = document.getElementById("completionTimeInput");
@@ -15,25 +15,23 @@ button.addEventListener("click", function(event) {
 
   // let task = form.elements.task.value; // could be swapped out for line below
   let task = taskInput.value;
-  let date = (new Date()).toLocaleDateString('en-US') //Convert to short date format
+  // let date = (new Date()).toLocaleDateString('en-US') //Convert to short date format
   let due = dueDateInput.value
   let complete = completionTimeInput.value
   let estimated = estimatedTimeInput.value
   let priority = priorityInput.value
 
   // Call the addTask() function using
-  addTask(task, date, due, complete, estimated, priority);
-
-  // Log out the newly populated taskList everytime the button has been pressed
-  console.log(taskList);
+  addTask(task, due, priority, estimated, complete);
 })
+  
+  
 
-// Create an empty array to store our tasks
-var taskList = [];
-
-function addTask(taskDescription, createdDate, dueDate, priorityRating, estimatedTime, completionStatus) {
+  localStorage.setItem('home_page_list', JSON.stringify(old_data))
+  // Log out the newly populated taskList everytime the button has been pressed
+function addTask(taskDescription, dueDate, priorityRating, estimatedTime, completionStatus) {
   var task = {
-    'createdDate_key': Date.now(),
+    // 'createdDate_key': Date.now()
     'description_key': taskDescription,
     'due_key': dueDate,
     'priority_key': priorityRating,
@@ -41,36 +39,46 @@ function addTask(taskDescription, createdDate, dueDate, priorityRating, estimate
     'completion_key': completionStatus
   };
 
-  // Add the task to our array of tasks
-  taskList.push(task);
+  if(localStorage.getItem('home_page_list') == null){
+    localStorage.setItem('home_page_list', '[]');
+  }
 
-  // Separate the DOM manipulation from the object creation logic
-  renderTask(task);
+  var old_data = JSON.parse(localStorage.getItem('home_page_list'))
+  old_data.push(task)
+
+  localStorage.setItem('home_page_list', JSON.stringify(old_data))
+  updateScreen()
 }
 
+function updateScreen(){
+  if(localStorage.getItem('home_page_list') != null){
+    home_page_list = JSON.parse(localStorage.getItem('home_page_list'))
 
-// Function to display the item on the page
-function renderTask(task) {
-// local storage
-localStorage.setItem(task.createdDate_key, JSON.stringify(task));
-let taskNew = localStorage.getItem(task.createdDate_key);
-taskNew = JSON.parse(taskNew);
+    // reseting list before printing !important!
+    document.getElementById("tasklist").innerHTML = ""
+    
+    for (let i = 0; i < home_page_list.length; i++) {
+        let El1 = home_page_list[i].description_key;
+        let El2 = home_page_list[i].due_key;
+        let El3 = home_page_list[i].priority_key;
+        let El4 = home_page_list[i].estimated_key;
+        let El5 = home_page_list[i].completion_key;
 
-// let val1 = taskNew.taskDescription
-// let val2 = taskNew.dueDate
-// let val3 = taskNew.priorityRating
-// let val4 = taskNew.estimatedTime
-// let val5 = taskNew.completionStatus
+        var li = "<li>" + El1 + "</li>";
+        var li2 = "<li>" + El2 + "</li>";
+        var li3 = "<li>" + El3 + "</li>";
+        var li4 = "<li>" + El4 + "</li>";
+        var li5 = "<li>" + El5 + "</li>";
 
-//   let item = document.createElement("li");
-//   item.innerHTML = "<p>" + "<u>" + "<b>" + val1 + "</b>" + "</u>" + "<br>" + "<br>" +
-//                   "<b>" + "Due on: " + "</b>" + val2 + "<br>" +
-//                   "<b>" + "At: " + "</b>" + val3 + "<br>" + 
-//                   "<b>" + "Estimated to take: " + "</b>" + val4 + " hours" + "<br>" + 
-//                   "<b>" + "Its a " + "</b>" + val5 + " priority" + "</p>";
-
-  updateFavourites()
-
+        document.getElementById("tasklist").insertAdjacentHTML('beforeend', li); //add to list
+        document.getElementById("tasklist").insertAdjacentHTML('beforeend', li2); //add to list
+        document.getElementById("tasklist").insertAdjacentHTML('beforeend', li3); //add to list
+        document.getElementById("tasklist").insertAdjacentHTML('beforeend', li4); //add to list
+        document.getElementById("tasklist").insertAdjacentHTML('beforeend', li5); //add to list
+        form.reset();
+    }
+  }
+}
   // Setup delete button DOM elements
   let delButton = document.createElement("button");
   let delButtonText = document.createTextNode("Delete");
@@ -82,21 +90,3 @@ taskNew = JSON.parse(taskNew);
     item.remove(); // Remove the task item from the page when button clicked
     // Because we used 'let' to define the item, this will always delete the right element
   })
-  
-  // Clear the value of the input once the task has been added to the page
-  form.reset();
-}
-
-function updateFavourites() {
-  let list = document.querySelector("aside ul");
-  list.innerHTML = "";
-
-  // Check localStorage for items in the `favourites` key
-  if (localStorage.getItem('taskList') == null) {
-    return;
-  }
-
-  // If there are items, get them, and convert back from JSON (explained above).
-  let taskList = localStorage.getItem('taskList');
-  taskList = JSON.parse(taskList);
-}
