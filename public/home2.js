@@ -1,13 +1,13 @@
 // Setting up variables for our HTML elements using DOM selection
 const form = document.getElementById("taskform");
 const button = document.querySelector("#taskform > button"); // Complex CSS query
-// const tasklist = document.getElementById("tasklist");
 const taskInput = document.getElementById("taskInput");
 const dueDateInput = document.getElementById("dueDateInput");
 const completionTimeInput = document.getElementById("completionTimeInput");
 const estimatedTimeInput = document.getElementById("estimatedTimeInput");
 const priorityInput = document.getElementById("priorityInput");
 
+window.onload = updateScreen()
 // Event listener for Button click
 // This could also be form.addEventListener("submit", function() {...} )
 button.addEventListener("click", function(event) {
@@ -15,7 +15,6 @@ button.addEventListener("click", function(event) {
 
   // let task = form.elements.task.value; // could be swapped out for line below
   let task = taskInput.value;
-  // let date = (new Date()).toLocaleDateString('en-US') //Convert to short date format
   let due = dueDateInput.value
   let complete = completionTimeInput.value
   let estimated = estimatedTimeInput.value
@@ -25,13 +24,8 @@ button.addEventListener("click", function(event) {
   addTask(task, due, priority, estimated, complete);
 })
   
-  
-
-  localStorage.setItem('home_page_list', JSON.stringify(old_data))
-  // Log out the newly populated taskList everytime the button has been pressed
 function addTask(taskDescription, dueDate, priorityRating, estimatedTime, completionStatus) {
   var task = {
-    // 'createdDate_key': Date.now()
     'description_key': taskDescription,
     'due_key': dueDate,
     'priority_key': priorityRating,
