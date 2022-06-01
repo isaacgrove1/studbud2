@@ -58,29 +58,32 @@ function updateScreen(){
         let El4 = home_page_list[i].estimated_key;
         let El5 = home_page_list[i].completion_key;
 
-        var li = "<li>" + El1 + "</li>";
-        var li2 = "<li>" + El2 + "</li>";
-        var li3 = "<li>" + El3 + "</li>";
-        var li4 = "<li>" + El4 + "</li>";
-        var li5 = "<li>" + El5 + "</li>";
+        var item = "<li>" + "<u>" + "<b>" + El1 + "</b>" + "</u>" + "<br>" +
+                    "Due on " + "<b>" + El2 + "</b>" + "<br>" + 
+                    "Its a " + "<b>" + El3 + "</b>" + " priority" + "<br>" +
+                    "Its estimated to take " + "<b>" + El4 + " hours" + "</b>" + "<br>"+
+                    "Submit at " + "<b>" + El5 + "</b>" + "<br>" + "<br>" + "</li>";
 
-        document.getElementById("tasklist").insertAdjacentHTML('beforeend', li); //add to list
-        document.getElementById("tasklist").insertAdjacentHTML('beforeend', li2); //add to list
-        document.getElementById("tasklist").insertAdjacentHTML('beforeend', li3); //add to list
-        document.getElementById("tasklist").insertAdjacentHTML('beforeend', li4); //add to list
-        document.getElementById("tasklist").insertAdjacentHTML('beforeend', li5); //add to list
+        // NOT WORKING TRYING TO ADD DELETE BUTTON 
+        // var span = document.createElement("SPAN");
+        // var txt = document.createTextNode("\u00D7");
+        // span.className = "close";
+        // span.appendChild(txt);
+        // a[i].appendChild(span);
+
+        document.getElementById("tasklist").insertAdjacentHTML('beforeend', item); //add to list
         form.reset();
     }
   }
 }
   // Setup delete button DOM elements
+  
   let delButton = document.createElement("button");
   let delButtonText = document.createTextNode("Delete");
   delButton.appendChild(delButtonText);
-  item.appendChild(delButton); // Adds a delete button to every task
-
+  // a.appendChild(delButton); // Adds a delete button to every task
   // Listen for when the 
+
   delButton.addEventListener("click", function(event){
     item.remove(); // Remove the task item from the page when button clicked
-    // Because we used 'let' to define the item, this will always delete the right element
   })

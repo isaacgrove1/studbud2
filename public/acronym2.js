@@ -4,11 +4,11 @@ updateScreen();
 var text = document.getElementById("input-acronym"); //checks there is input
     text.addEventListener("keydown", function (e) {
         if (e.code === "Enter") {  //checks whether the pressed key is "Enter"
-            validate(e)
+            validate()
         }
     });
 
-function validate(e) {
+function validate() {
     var text = document.getElementById("input-acronym").value;
     var new_acro_term = [] //establish empty array to accumulate letters
     var new_term = text.split(' '); //split at " "
@@ -43,7 +43,7 @@ function updateScreen(){
 
         // reseting list before printing !important!
         document.getElementById("acronym-list").innerHTML = ""
-        
+
         for (let i = 0; i < acro_list.length; i++) {
             let long = acro_list[i].name;
             let short = acro_list[i].short;
@@ -53,7 +53,13 @@ function updateScreen(){
             document.getElementById("acronym-list").insertAdjacentHTML('beforeend', li2); //add to list
             document.getElementById("acronym-list").insertAdjacentHTML('beforeend', li); //add to list
             document.getElementById("input-acronym").value = ""; // clear the value from typing box
-
+        deleteItem()
         }
     }
+}
+
+function deleteItem(){
+    localStorage.getItem('acro_list')
+    acro_list = JSON.parse(localStorage.getItem('acro_list'))
+    console.log(acro_list[0])
 }

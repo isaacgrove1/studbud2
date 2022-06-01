@@ -46,3 +46,10 @@
     right: 23%;
     top: 28%;
 }
+
+@media only screen and (max-width: 414px) {
+    .music-split, .music-left, .music-right {
+        display:flex;
+        flex-direction: column;
+    }
+}

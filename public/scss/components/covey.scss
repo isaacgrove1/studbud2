@@ -28,3 +28,10 @@ background-color: #7082B2;
     float: left;
     writing-mode: vertical-rl;
 }
+
+@media only screen and (max-width: 414px) {
+    .covey-quadrant {
+        display:flex;
+        flex-direction: column;
+    }
+}
