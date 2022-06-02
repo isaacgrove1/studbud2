@@ -13,15 +13,17 @@ var interval
 
 // function when click start button
 function startTimer(){
-  // starts appending tens column
+  // starts updating tens column
   tens++;
   // Sets parameteres for certain columns to update at what point
   if(tens < 9){
+    // ensures that when 10s less than 10, there is a 0 in front
     appendTens.innerHTML = "0" + tens;
   }
   if (tens > 9){
     appendTens.innerHTML = tens;
   }
+  // Changes seconds column when tens reaches 100
   if (tens > 99){
     seconds++;
     appendSeconds.innerHTML = "0" + seconds;
@@ -31,6 +33,7 @@ function startTimer(){
   if (seconds > 9){
     appendSeconds.innerHTML = seconds;
   }
+  // Changes minutes column when seconds is over 59
   if (seconds > 59){
     minutes++;
     appendMinutes.innerHTML = "0" + minutes;

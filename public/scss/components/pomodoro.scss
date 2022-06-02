@@ -5,10 +5,8 @@
 
 .pomodoro-settings-div{
     position: absolute;
-    top: 18%;
-    right: 15%;
-    width: 30%;
-    height: 50%;
+    width: 20%;
+    height: 35%;
     // background-color: red;
 }
 
@@ -31,34 +29,37 @@
 }
 
 .pomodoro-timer-outline{
-    height: 55%;
-    width: 30%;
+    height: 35vw;
+    width: 35vw;
     background-color: rgb(255, 255, 255);
     // border-color: black;
     border-radius: 50%;
     position: absolute;
-    top: 20%;
-    left: 20%
+    top: 16%;
+    left: 17%
 }
 
 #pomodoro-start{
-  width: 55%;
+  width: 20%;
   background-color: #E74E4D;
   border-radius: 5px;
   border: none;
-  color: white
+  color: white;
+position: absolute;
+top: 67%;
+left: 23%
 }
 
 #pomodoro-countdown{
-    font-size: 110px;
+    font-size: 8rem;
     position: absolute;
-    left: 27%;
-    top: 36%;
+    left: 23%;
+    top: 34%;
 }
 
 #pomodoro-set-time{
     position: relative;
-    left: 25%;
+    left: 2%;
     margin-top: 8px;
     width: 50%;
     margin-bottom: 15px;
@@ -69,8 +70,22 @@
 }
 
 .pomodoro_container{
-    position: relative;
-    width: 20%;
-    margin-left: auto;
-    margin-right: auto;
+    position: absolute;
+    top: 25%;
+    right: 15%;
+    width: 30%;
+    height: 60%;
+    // background-color: red;
 }
+
+#sessionText{
+    position: absolute;
+    top: 65%;
+}
+
+#totalTime{
+    position: absolute;
+    top: 70%;
+    left: 15%
+}
+

@@ -5,18 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="scss/main.scss" rel="stylesheet" type="text/css" />
-    <title>Music</title>
+    <link rel="fav icon" type="image/png" href="assets/studbud_logo.png"/>
+    <title>StudBud - Music Player</title>
 </head>
-<body>
-    <div class="music-split music-left">
+<body class="music-container">
+    <img src='assets/studbud_logo.png' class='logo'>
+    <div class="music-left">
     <a href='index.html'><img src='assets/back_b.png' class='back-button music-back-button'></a>
         <h2 id='connected-to'>Connected To</h2>
         <img src='assets/spotify-logo.png' id='spotify-logo'>
         <!-- <h1>Spotify</h1> -->
     </div>
-    <div class="music-split music-right">
+    <div class="music-right">
         <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0vvXsWCC9xrXsKd4FyS8kM?utm_source=generator" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" id='music-player'></iframe>
     </div>
-    <!-- <script type="module" src="music.js"></script> -->
 </body>
 </html>

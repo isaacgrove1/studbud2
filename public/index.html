@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html>
+  <!-- link style sheets and define document attributes -->
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>home</title>
+    <title>StudBud - Home</title>
     <link href="scss/main.scss" rel="stylesheet" type="text/css" />
+    <link rel="fav icon" type="image/png" href="assets/studbud_logo.png"/>
   </head>
-  <body class='body-home' id='home-welcome-screen'>
-    <div id='home-left-side'>
+  <body class="home-page" id='home-welcome-screen'>
+    <img src='assets/studbud_logo.png' class='logo'>
+    <!-- split screen into two halves and define lhs of screen -->
+    <div class='home-left-side'>
+      <!-- welcome text -->
       <h2 id='welcome'>Welcome John</h2>
       <h5 id='here-tasks'>Here are your tasks for today</h5>
+      <!-- container of task input and task accumulation -->
       <div class="container-tasks">
-        <!-- Task list -->
+        <!-- task form -->
         <form id="taskform">
+          <!-- input task name -->
           <label for="task">Task:</label>
           <input type="text" name="task" class='allTaskInput' id="taskInput">
 
@@ -24,14 +31,12 @@
           <!-- Time input -->
           <label for="completionTime">Completion Time: </label>
           <input type="time" name="completionTime" class='allTaskInput' id="completionTimeInput">
-
           <br><br>
-
+          <!-- estimated completion time -->
           <label for="estimatedTime">Estimated completion time (in hours):</label>
           <input type="number" name="estimatedTime" class='allTaskInput' id="estimatedTimeInput">
-          <!-- Priority -->
           <br><br>
-
+          <!-- Priority rating for taks -->
           <label for="priority">Task Priority:</label>
           <select name="prority" id="priorityInput">
             <option value="">Select one</option>
@@ -41,12 +46,15 @@
           </select>
 
           <br><br>
-
+          <!-- submit form -->
           <button type="submit" id="submitTask">Submit</button>
         </form>  
+        <hr>
+        <!-- unpopulated list of all the tasks -->
         <ul id="tasklist"></ul>
       </div>
     </div>
+    <!-- navigation of rhs -->
     <nav id="links-to-pages">
       <a id='home-link-1' href='covey.html'>Covey quadrants</a>
       <a id='home-link-2' href='stopwatch.html'>Stopwatch</a>
@@ -54,6 +62,6 @@
       <a id='home-link-4' href='pomodoro.html'>Pomodoro</a>
       <a id='home-link-5' href='acronym.html'>Acronym</a>
     </nav>
-    <script src="home2.js"></script>
+    <script src="home.js"></script>
   </body>
 </html>
