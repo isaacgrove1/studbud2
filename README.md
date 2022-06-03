@@ -12,7 +12,7 @@ One iteration made to my website was the inclusion of sticky notes for the covey
 
 ### Task list
 
-My taregt audience determined in assignment 2 were male university students who generally studied under 12 hours a week, Given the nature of my target further iterations were made to the tasklist on my website. I had previously implemented a task list which showed basic information, and then popped out into a more comprehensive list when clicked on by the user. This action had to be taken to reveal important info such as due dates, task priority etc. Given accounts of students who study less than 12 hours about how they often struggle to have a simple task management system, after self-reflection it was decided to abandon the pop-up aspect of the task list. This way students do not have to "dig" for the extra information about their tasks; rather it is all on the home page.
+My taregt audience determined in assignment 2 were male university students who generally studied under 12 hours a week. Given the nature of my target audience, further iterations were made to the tasklist on my website. I had previously implemented a task list which showed basic information, and then popped out into a more comprehensive list when clicked on by the user. This action had to be taken to reveal important info such as due dates, task priority etc. Given accounts of students who study less than 12 hours about how they often struggle to have a simple task management system, after self-reflection it was decided to abandon the pop-up aspect of the task list. This way students do not have to "dig" for the extra information about their tasks; rather it is all on the home page.
 
 | ![home_old](public/assets/readme_photos/old_home.png) |
 |:--:|
@@ -32,7 +32,7 @@ Upon further self-reflection it was decided to also drop the pomodoro timeline a
 
 ### Added logo
 
-Upon further self-reflection, it was noted that there was a small lack of consistency among all of the pages of the StudBud website in assignment 2. One solution which seemed to somewhat improve this lack of uniformity across pages was the addition of a StudBud logo. The presence of a consistent icon across each page improved the overall content of all pages on the website. This icon was also added as the favicon of each StudBud page.
+Upon further self-reflection, it was noted that there was a small lack of consistency among all of the pages of the StudBud website in assignment 2. One solution which seemed to somewhat improve this lack of uniformity across pages was the addition of a StudBud logo. The presence of a consistent icon across each page improved the overall content of all pages on the website. This icon was also added as the favicon of each StudBud page. This also important for brand recognition and legitimacy of a website.
 
 ![logo](public/assets/readme_photos/logo.png)
 
@@ -40,13 +40,11 @@ Upon further self-reflection, it was noted that there was a small lack of consis
 
 ### Hide terms/ shuffle on acronym
 
-The next steps of my design which were unable to be completely fully would be to get the hide terms and shuffle buttons of the acronym maker to be functional. There is some commented code in the acronym.html file and acronym.js file which could be a potential solution to getting a functional 'hide terms' button - although I could not get it working as of yet.
-
-<!-- Another difficulty which I had trouble with was implementing local storage while appending tasks with a delete button. I managed to get local storage working and a functional delete button on each task, independant of each other. However, was unable to get both working perfectly together. This is the reason for the two seperate home.js files. Currently the index.html is referencing the file with local storage- but without a functional delete button -->
+The next steps of my design which were unable to be completely satisfied in this version would be to get the 'hide terms' and 'shuffle' buttons of the acronym maker to be functional. There is some commented code in the acronym.html file and acronym.js file which could be a potential solution to getting a functional 'hide terms' button - although I could not get it working as of yet.
 
 ## Pomodoro circular timer
 
-Another feature which I was unable to implement was the visual circular timer on the pomodoro clock. This was a feature which would certainly add a more dynamic and engaging feel to the website overall.
+Another feature which I was unable to implement was the visual circular timer on the pomodoro clock. This was a feature which would certainly add a more dynamic and engaging feel to the website overall. This would especially be beneficial considering the absense of the pomodoro timeline down the bottom which a user could find potentially distracting.
 
 
 ## References
@@ -66,9 +64,3 @@ W3schools.com. 2019. How To Create A Split Screen. [online] Available at: <https
 W3schools.com. 2019. W3Schools online HTML editor. [online] Available at: <https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_circles> [Accessed 19 May 2022].
 
 Webdev, L., 2019. [online] Youtube.com. Available at: <https://www.youtube.com/watch?v=vAEG6OVCass&t=670s> [Accessed 26 May 2022].
-
-### include rob dongas tutoirlas
-
-### spotify playlist
-
-### include co-authored by mgor3966
