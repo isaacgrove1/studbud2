@@ -67,7 +67,7 @@ function updateScreen(){
             var li = "<li>" + long + "</li>";
             var li2 = "<li>" + short + "</li>";
 
-            document.getElementById("acronym-list").appendChild(delButton) // delete button added to list
+            // document.getElementById("acronym-list").appendChild(delButton) // delete button added to list
             document.getElementById("acronym-list").insertAdjacentHTML('beforeend', li2); //short added to list
             document.getElementById("acronym-list").insertAdjacentHTML('beforeend', li); //long add to list 
             document.getElementById("input-acronym").value = ""; // clear the value from typing box
@@ -75,12 +75,9 @@ function updateScreen(){
     }
 }
 
-delButton.addEventListener("click", function (event) {
-    event.preventDefault();
-
-    let id = event.target.parentElement.getAttribute('date-id');
-    let index = taskList.findIndex(task => task.id === Number(id));
-    window.localStorage.removeItem(id);
-    removeItemFromArray(taskList, index);
-   
-});
+// Hide every second term - mapped to a button with the ID colour-change
+// $('#colour-change').toggle(function () {
+//     $("#acronym-list>li:nth-child(even)").css({color: "#48567B"});
+// }, function () {
+//     $("#acronym-list>li:nth-child(even)").css({color: "white"});
+// });

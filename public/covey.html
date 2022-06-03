@@ -11,6 +11,7 @@
 <body>
     <img src='assets/studbud_logo.png' class='logo'>
     <a href='index.html'><img src='assets/back_b.png' class='back-button'></a>
+    <!-- divide screen into 4 quadrants -->
     <div class="covey-quadrant">
         <div class="covey-quad1">
             <h2>Urgent</h2>
@@ -29,18 +30,21 @@
             <h2 class='text-vert'>Not Important</h2>
         </div>
     </div>
+    <!-- stickies form which enables creation of new items -->
     <div id="stickies-container"></div>
         <div class="sticky-form">
             <label for="stickytitle">Task</label>
             <input type="text" name="stickytitle" id="stickytitle" />
             <label for="stickytext">Details of the task</label>
+            <!-- defining how much room user has to input text -->
             <textarea
                 name="stickytext"
                 id="stickytext"
                 cols="24"
                 rows="10"
             ></textarea>
-            <button class="button" id="createsticky">Create!</button>
+            <!-- create button -->
+            <button class="button" id="createsticky">Create</button>
         </div>
     <script src="covey.js"></script>
 </body>

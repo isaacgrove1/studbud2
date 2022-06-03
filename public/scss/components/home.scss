@@ -51,6 +51,7 @@
     background-color: white;
 }
 
+// font sizes and position
 #welcome{
     font-size: 4rem;
     margin-bottom: -55px;
@@ -99,4 +100,12 @@
     color: black;
     opacity: 1;
     cursor: pointer;
+}
+
+// create a stacked layout when screen reach tablet size
+@media only screen and (max-width: 820px) {
+    #home-welcome-screen {
+        display:flex;
+        flex-direction: column;
+    }
 }

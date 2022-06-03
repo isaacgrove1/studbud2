@@ -1,3 +1,4 @@
+// container for all the stopwatch elements
 .container-stopwatch{
     margin-left: 27%;
     margin-right: 20%;
@@ -6,10 +7,12 @@
     float:initial;
 }
 
+// container for all the stopwatch buttons
 .stopwatch-buttons{
     margin-left: 16%;
 }
 
+// styling size and position of each of the stopwatch buttons
 #button-start, #button-stop, #button-reset{
     border: none;
     border-radius: 40px;
@@ -20,6 +23,7 @@
     font-weight:600;
 }
 
+// style colours of each of the buttons
 #button-start{
     background-color: rgb(31, 119, 31);
 }
@@ -39,12 +43,14 @@
     left: 2%;
 }
 
+// style the text of the stopwatch elements (tens, seconds, minutes)
 #minutes, #seconds, #tens{
     font-size: 160px;
     color: black;
     font-weight: 400;
   }
   
+// title of encouraging message
   #stopwatch-progress{
     position: absolute;
     top: 10%;
@@ -54,10 +60,8 @@
     font-size: 70px;
   }
 
+//   resize for phone
 @media only screen and (max-width: 414px) {
-    // body{
-    //     background-color: blue;
-    // }
     .container-stopwatch{
         margin-left: 16%;
         margin-right: 10%;

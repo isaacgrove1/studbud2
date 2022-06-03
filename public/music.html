@@ -8,15 +8,18 @@
     <link rel="fav icon" type="image/png" href="assets/studbud_logo.png"/>
     <title>StudBud - Music Player</title>
 </head>
+<!-- container allows page to be size responsive -->
 <body class="music-container">
     <img src='assets/studbud_logo.png' class='logo'>
+    <!-- lhs of music page -->
     <div class="music-left">
-    <a href='index.html'><img src='assets/back_b.png' class='back-button music-back-button'></a>
-        <h2 id='connected-to'>Connected To</h2>
-        <img src='assets/spotify-logo.png' id='spotify-logo'>
-        <!-- <h1>Spotify</h1> -->
+        <a href='index.html'><img src='assets/back_b.png' class='back-button music-back-button'></a>
+            <h2 id='connected-to'>Connected To</h2>
+            <img src='assets/spotify-logo.png' id='spotify-logo'>
     </div>
+    <!-- rhs of music page -->
     <div class="music-right">
+        <!-- iframe code from spotify -->
         <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0vvXsWCC9xrXsKd4FyS8kM?utm_source=generator" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" id='music-player'></iframe>
     </div>
 </body>

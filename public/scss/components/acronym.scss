@@ -4,11 +4,12 @@
     flex-direction: row;
 }
 
+/* define the width for left side */
 .acronym-left {
     width: 80%;
 }
 
-/* Control the right side */
+/* outline style for the right side */
 .acronym-right {
     background-color: #48567B;
     width: 50%;
@@ -17,6 +18,7 @@
     overflow: auto;
 }
 
+// input box for new term
 .acronym-new-term{
     margin-top: 50%;
     margin-left: 10%;
@@ -31,6 +33,7 @@
     left: 2% !important;
 }
 
+// hide and shuffle buttoons
 #hide{
     position: absolute;
     left: 54%;
@@ -45,23 +48,26 @@
     width: 7%;
 }
 
-
+// style list
 #acronym-list{
     list-style: none;
     float: left;
 }
 
-#acronym-list>li:nth-child(3n+2){
+// #acronym-list>li:nth-child(3n+2){
+#acronym-list>li:nth-child(odd){
     font-weight:bold;
     font-size: 30px;
     color: white;
 }
-  
-  #acronym-list>li:nth-child(3n){
+
+// #acronym-list>li:nth-child(3n){
+#acronym-list>li:nth-child(even){
     font-size: 20px;
     color: white;
 }
 
+// switch to stacked layout when reach a tablet size
 @media only screen and (max-width: 820px) {
     .acronym-container {
         display:flex;
@@ -75,5 +81,17 @@
     .acronym-right {
         background-color: #48567B;
         width: 100%
+    }
+
+    #hide{
+        left: 83%;
+        top: 7.5%;
+        width: 7%;
+    }
+    
+    #shuffle{
+        top: 7%;
+        left: 88%;
+        width: 9%;
     }
 }
