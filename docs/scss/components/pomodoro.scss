@@ -1,0 +1,152 @@
+// set background colour
+.body-pomodoro{
+    background-color: #48567B
+}
+
+// container of the form for the pomodoro timer
+.pomodoro-settings-div{
+    position: absolute;
+    width: 20%;
+    height: 35%;
+}
+
+// display all the input settings in a column
+.pomodoro-settings {
+    display: flex;
+    flex-direction: column;
+    float: left;
+}
+
+// input style for all the pomodoro settings
+#numSessInput, #studyTimeInput, #studyBreakInput{
+    border: none;
+    border-bottom: 3px solid black;
+    background-color: white;
+    opacity: 0.8;
+}
+
+// style settings title
+#pomodoro-SessSettings{
+    text-align: left;
+    margin-bottom: 10%;
+}
+
+// create circle around timer
+.pomodoro-timer-outline{
+    height: 35vw;
+    width: 35vw;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    position: absolute;
+    top: 16%;
+    left: 17%
+}
+
+// pomodoro start button 
+#pomodoro-start{
+  width: 20%;
+  background-color: #E74E4D;
+  border-radius: 5px;
+  border: none;
+  color: white;
+position: absolute;
+top: 67%;
+left: 23%
+}
+
+// text that changes as pomodoro timer counts down
+#pomodoro-countdown{
+    font-size: 8rem;
+    position: absolute;
+    left: 23%;
+    top: 34%;
+}
+
+// set time button for pomodoro timer
+#pomodoro-set-time{
+    position: relative;
+    left: 2%;
+    margin-top: 8px;
+    width: 50%;
+    margin-bottom: 15px;
+    background-color: #484851;
+  border-radius: 5px;
+  border: none;
+  color: white
+}
+
+// container of all the settings elements of the pomodoro thing
+.pomodoro_container{
+    position: absolute;
+    top: 25%;
+    right: 15%;
+    width: 30%;
+    height: 60%;
+}
+
+#sessionText{
+    position: absolute;
+    top: 65%;
+}
+
+// total time calculated for the entire session
+#totalTime{
+    position: absolute;
+    top: 70%;
+    left: 15%
+}
+
+// change layout for tablet
+@media only screen and (max-width: 820px) {
+    #pomodoro-countdown{
+        font-size: 6rem;
+        position: absolute;
+        left: 19.5%;
+        top: 25%;
+    }
+
+    #pomodoro-start{
+        width: 30%;
+      top: 74%;
+      left: 40%
+      }
+
+    #sessionText{
+        top: 70%;
+    }
+    
+    #totalTime{
+        top: 76%;
+    }
+}
+
+// change layout for phone
+@media only screen and (max-width: 414px) {
+    #pomodoro-countdown{
+        font-size: 3rem;
+        position: absolute;
+        left: 19.5%;
+        top: 21%;
+    }
+
+    #pomodoro-start{
+        width: 50%;
+      top: 58%;
+      left: 77%
+      }
+
+    #sessionText{
+        top: 55%;
+    }
+    
+    #totalTime{
+        top: 65%;
+    }
+
+    .pomodoro_container{
+        top: 37%;
+        right: 50%;
+        width: 30%;
+        height: 60%;
+    }
+}

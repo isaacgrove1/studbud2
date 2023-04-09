@@ -1,0 +1,63 @@
+// import fonts from google fonts
+@import url('https://fonts.googleapis.com/css?family=Poppins:400');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+
+html {font-size: 100%;}
+
+// default body styling
+body {
+  background: white;
+  font-family: 'Inter Regular', sans-serif;
+  font-weight: 300;
+  line-height: 1.75;
+  color: #000000;
+}
+
+// paragraph style
+p {margin-bottom: 1rem;
+}
+
+label{
+  color: white;
+}
+
+// headings styles default
+h1, h2, h3, h4, h5{
+  margin: 3rem 0 1.38rem;
+  font-family: 'Inter Regular', sans-serif;
+  color: white;
+  text-align: center;
+}
+
+// semibold
+h1 {font-size: 3.031rem;
+  font-weight: 600;
+}
+
+// medium
+h2 {font-size: 2.441 rem;
+  font-weight: 500;}
+
+// regular
+h3 {font-size: 1.953rem;
+  font-weight: 400;
+}
+
+// light
+h4 {font-size: 1.563rem;
+  font-weight: 300;
+}
+
+// thin
+h5 {font-size: 1.25rem;
+  font-weight: 100;}
+
+small, .text_small {font-size: 0.8rem;}
+
+// style for logo on all pages
+.logo{
+  position: fixed;
+  bottom: 1%;
+  left: 1%;
+  width: 4%;
+}

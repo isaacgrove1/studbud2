@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="scss/main.scss" rel="stylesheet" type="text/css" />
+    <link rel="fav icon" type="image/png" href="assets/studbud_logo.png"/>
+    <title>StudBud - Acronym</title>
+</head>
+<body>
+    <img src='assets/studbud_logo.png' class='logo'>
+    <!-- enable dynamic layout when screen is resized -->
+    <div class="acronym-container"> 
+        <div class="acronym-left">
+            <a href='index.html'><img src='assets/back_b.png' class='back-button acronym-back-button'></a>
+            <!-- hide and shuffle buttons which were not mapped to any function in the end -->
+            <img src='assets/hide.png' id='hide'>
+            <img src='assets/shuffle.png' id='shuffle'>
+            <!-- input new term -->
+            <input class='acronym-new-term' type="text" placeholder="Type a new term and press Enter..." id='input-acronym'>
+        </div>
+        <!-- rhs of screen -->
+        <div class="acronym-right">
+            <ul id='acronym-list'></ul>
+        </div>
+    </div>
+    <!-- potential hide of every second term which couldn't get working properly -->
+    <!-- <button id='colour-change'></button> -->
+    <script src="acronym.js"></script>
+</body>
+</html>

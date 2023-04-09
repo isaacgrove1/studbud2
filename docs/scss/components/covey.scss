@@ -1,0 +1,44 @@
+// Create grid of covey quadrants
+.covey-quadrant {
+    display: grid;
+    grid-template-columns: 46% 42%;
+    grid-auto-rows: 40vh 40vh;
+    margin-left: 10%;
+    margin-top: 3%;
+}
+
+// style the colours of each square
+.covey-quad1 {
+background-color: #E74E4D;
+}
+
+.covey-quad2 {
+background-color: #48567B;
+}
+
+.covey-quad3 {
+background-color: #F57F7E;
+}
+
+.covey-quad4 {
+background-color: #7082B2;
+}
+
+// style vertical text
+.text-vert{
+    float: left;
+    writing-mode: vertical-rl;
+}
+
+// create stacked layout when reach a tablet size
+@media only screen and (max-width: 820px) {
+    .covey-quadrant {
+        display:flex;
+        flex-direction: column;
+        padding-right: 5%;
+    }
+
+    .covey-quad1, .covey-quad2, .covey-quad3, .covey-quad4{
+        height: 25rem;
+    }
+}

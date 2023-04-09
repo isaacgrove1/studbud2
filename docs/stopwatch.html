@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="scss/main.scss" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="fav icon" type="image/png" href="assets/studbud_logo.png"/>
+    <title>StudBud - Stopwatch</title>
+</head>
+<body>
+    <img src='assets/studbud_logo.png' class='logo'>
+    <a href='index.html'><img src='assets/back_b.png' class='back-button'></a>
+    <!-- encouraging message for user -->
+    <h5 id='stopwatch-progress'>Great Progress!</h5>
+    <!-- container for whole stopwatch elements -->
+    <div class="container-stopwatch">
+        <!-- elements which count up -->
+        <p><span id="minutes">00</span>: <span id="seconds">00</span>: <span id="tens">00</span></p>
+        <!-- container for buttons -->
+        <div class="stopwatch-buttons">
+            <!-- buttons for stopwatch -->
+            <button id="button-start">START</button>
+            <button id="button-stop">STOP</button>
+            <button id="button-reset">RESET</button
+        </div>
+    </div>
+    <script type="module" src="stopwatch.js"></script>
+</body>
+</html>

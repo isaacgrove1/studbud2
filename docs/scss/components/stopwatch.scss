@@ -1,0 +1,96 @@
+// container for all the stopwatch elements
+.container-stopwatch{
+    margin-left: 27%;
+    margin-right: 20%;
+    margin-top: 17%;
+    // border: solid red;
+    float:initial;
+}
+
+// container for all the stopwatch buttons
+.stopwatch-buttons{
+    margin-left: 16%;
+}
+
+// styling size and position of each of the stopwatch buttons
+#button-start, #button-stop, #button-reset{
+    border: none;
+    border-radius: 40px;
+    margin-right: 20px;
+    padding: 18px;
+    color: white;
+    font-size: 15px;
+    font-weight:600;
+}
+
+// style colours of each of the buttons
+#button-start{
+    background-color: rgb(31, 119, 31);
+}
+
+#button-stop{
+    background-color: #E74E4D;
+}
+
+#button-reset{
+    background-color: #2D2C3D;
+}
+
+.back-button{
+    width: 4%;
+    position: absolute;
+    top: 3%;
+    left: 2%;
+}
+
+// style the text of the stopwatch elements (tens, seconds, minutes)
+#minutes, #seconds, #tens{
+    font-size: 160px;
+    color: black;
+    font-weight: 400;
+  }
+  
+// title of encouraging message
+  #stopwatch-progress{
+    position: absolute;
+    top: 10%;
+    left: 28%;
+    color: #E74E4D;
+    text-decoration: underline 3px;
+    font-size: 70px;
+  }
+
+//   resize for phone
+@media only screen and (max-width: 414px) {
+    .container-stopwatch{
+        margin-left: 16%;
+        margin-right: 10%;
+        margin-top: 50%;
+        // border: solid red;
+    }
+
+    #minutes, #seconds, #tens{
+        font-size: 80px;
+      }
+
+    #stopwatch-progress{
+    top: 11%;
+    left: 17%;
+    font-size: 40px;
+    }
+
+    .stopwatch-buttons{
+        margin-left: 8%;
+    }
+
+    #button-start, #button-stop, #button-reset{
+        border-radius: 20px;
+        font-size: 10px;
+        margin-top: 50%;
+        padding: 5%;
+    }
+
+    .back-button{
+        width: 8%;
+    }
+}
